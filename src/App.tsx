@@ -1,5 +1,5 @@
 function App() {
-  return <div className="flex"></div>;
+  return <div></div>;
 }
 
 export default App;
