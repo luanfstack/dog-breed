@@ -7,9 +7,9 @@ export async function registerUser(email: string) {
     body: JSON.stringify({ email }),
   });
   const data = await response.json();
-  if (!data.user) return true;
+  if (!data.user) return false;
   sessionStorage.setItem("token", data.user.token);
-  return false;
+  return data.user.token;
 }
 
 export async function getPhotos(breed: string, token: string) {

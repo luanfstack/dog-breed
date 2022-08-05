@@ -12,6 +12,7 @@ function List() {
   if (!token) return <Navigate to="/register" replace={true} />;
 
   useEffect(() => {
+    setPhotos([]);
     getPhotos(breed, token).then((result) => setPhotos(result));
   }, [breed]);
 
@@ -21,7 +22,9 @@ function List() {
       <div className="container m-auto">
         <div className="sticky top-0 left-0 bg-gray-200 py-1 text-center">
           <button
-            className="px-2 py-1 text-xl mx-8"
+            className={`px-2 py-1 text-xl mx-8 rounded-lg ${
+              breed == "chihuahua" && "border bg-black text-white"
+            }`}
             onClick={() => {
               setBreed("chihuahua");
             }}
@@ -29,19 +32,25 @@ function List() {
             Chihuahua
           </button>
           <button
-            className="px-4 py-2 text-xl mx-8"
+            className={`px-2 py-1 text-xl mx-8 rounded-lg ${
+              breed == "husky" && "border bg-black text-white"
+            }`}
             onClick={() => setBreed("husky")}
           >
             Husky
           </button>
           <button
-            className="px-4 py-2 text-xl mx-8"
+            className={`px-2 py-1 text-xl mx-8 rounded-lg ${
+              breed == "labrador" && "border bg-black text-white"
+            }`}
             onClick={() => setBreed("labrador")}
           >
             Labrador
           </button>
           <button
-            className="px-4 py-2 text-xl mx-8"
+            className={`px-2 py-1 text-xl mx-8 rounded-lg ${
+              breed == "pug" && "border bg-black text-white"
+            }`}
             onClick={() => setBreed("pug")}
           >
             Pug
