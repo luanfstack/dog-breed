@@ -12,7 +12,7 @@ Projeto feito com [React](https://reactjs.org/) ,[Vite](https://vitejs.dev/) e [
 | :--------------------------------: | :---------------------------------: |
 | ![](screenshots/register_user.png) | ![](screenshots/dog_breed_list.png) |
 
-### Run Localy
+### Run Locally
 
 ```
 git clone https://github.com/luanfstack/dog-breed.git
