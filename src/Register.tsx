@@ -5,6 +5,7 @@ import { registerUser } from "./api";
 function Register() {
   const [email, setEmail] = useState("");
   const [token, setToken] = useState();
+  const [isLoading, setIsLoading] = useState(false);
 
   if (sessionStorage.getItem("token"))
     return <Navigate to="/list" replace={true} />;
@@ -25,16 +26,23 @@ function Register() {
             className="mt-2 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             type="email"
             name="email"
-            onChange={(e) => setEmail(e.target.value)}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setToken(undefined);
+            }}
           />
         </div>
         <button
           className="mt-2 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center"
           onClick={() => {
-            registerUser(email).then((token) => setToken(token));
+            setIsLoading(true);
+            registerUser(email).then((token) => {
+              setToken(token);
+              setIsLoading(false);
+            });
           }}
         >
-          Confirmar
+          {isLoading ? "Carregando" : "Confirmar"}
         </button>
       </div>
     </div>
