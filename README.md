@@ -4,7 +4,7 @@ Projeto feito com [React](https://reactjs.org/) ,[Vite](https://vitejs.dev/) e [
 
 ## Live Demo
 
-[Live demo](https://dog-breed-zeta.vercel.app/register)
+[Live demo](https://dog-breed-zeta.vercel.app/)
 
 ### Screenshots
 
