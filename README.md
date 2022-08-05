@@ -8,7 +8,11 @@ Projeto feito com [React](https://reactjs.org/) ,[Vite](https://vitejs.dev/) e [
 
 ### Screenshots
 
-![Register Page](screenshots/register_user.png)![Breed List Page](screenshots/dog_breed_list.png)
+|           Register Page            |           Breed List Page           |
+| :--------------------------------: | :---------------------------------: |
+| ![](screenshots/register_user.png) | ![](screenshots/dog_breed_list.png) |
+
+### Run Localy
 
 ```
 git clone https://github.com/luanfstack/dog-breed.git
